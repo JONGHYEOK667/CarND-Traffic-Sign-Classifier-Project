@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./output_fig/1.Composition_of_data.jpg "Composition of data"
-[image2]: ./output_fig/grayscale.jpg "Grayscaling"
+[image2]: ./output_fig/2.Sample_train_Image.jpg "Sample train Image"
 [image3]: ./output_fig/random_noise.jpg "Random Noise"
 [image4]: ./output_fig/placeholder.png "Traffic Sign 1"
 [image5]: ./output_fig/placeholder.png "Traffic Sign 2"
@@ -57,29 +57,22 @@ Here is an exploratory visualization of the data set. It is a hist plot of Train
 As you can see in the graph below, the data distribution for the labels is uneven. However, it can be seen that the density of Train / Valid / Test data for each label is similar.  
 Therefore, it seems to be possible to check the difference in the learning result according to the relative ratio of each label (the amount of data for each label).
 
-![alt text][image1]
+![alt text][image1]  
+
+And, here is a sample Traing data  
+Because of the low image size (32x32), it is bad resolution
+Also, there are many symbols, numbers in the red edged triangle of dataset.  
+Therefore, it is necessary to check the learning results in the data set with low resolution.
+
+![alt text][image2]
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
 
-Here is an example of a traffic sign image before and after grayscaling.
+I normalized the image data because
 
-![alt text][image2]
-
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
