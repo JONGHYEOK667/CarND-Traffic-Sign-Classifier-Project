@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./output_fig/1.Composition_of_data.jpg "Composition of data"
 [image2]: ./output_fig/2.Sample_train_Image.jpg "Sample train Image"
-[image3]: ./output_fig/random_noise.jpg "Random Noise"
+[image3]: ./output_fig/3.Train_history.jpg "Train histroy"
 [image4]: ./output_fig/placeholder.png "Traffic Sign 1"
 [image5]: ./output_fig/placeholder.png "Traffic Sign 2"
 [image6]: ./output_fig/placeholder.png "Traffic Sign 3"
@@ -117,14 +117,20 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+* Optimizer : Adam (w/ default setting)  
+* Batch size : 1024 (Choose a Batch size that minimizes the time takes to run an epoch)  
+* Number of epochs : 80 (but, Early stopping callback is applied)
+* Early stopping : patience=5, monitor='val_accuracy'
+
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 99.02%
+* validation set accuracy of 94.88%
+* test set accuracy of 94.35%
+
+![alt text][image3]
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
