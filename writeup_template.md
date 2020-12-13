@@ -108,7 +108,7 @@ My final model consisted of the following layers:
 | Fully connected		| outputs 128      									|
 | Drop out      	| rate = 0.35,  outputs 128 				|
 | Fully connected		| outputs 43      									|
-| Softmax				| 43      									|
+| Softmax				|outputs 43      									|
 |:---------------------:|:---------------------------------------------:| 
 |	Total parameters					|					1,738,347							|
 |			Trainable parameters					|						1,738,347									|
