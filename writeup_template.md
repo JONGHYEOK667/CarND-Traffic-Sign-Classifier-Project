@@ -90,14 +90,28 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x32, RELU activation|
+| Max pooling	      	| 2x2 stride,  outputs 16x16x32 				|
+| Drop out      	| rate = 0.35,  outputs 16x16x32 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64, RELU activation|
+| Max pooling	      	| 2x2 stride,  outputs 8x8x64 				|
+| Drop out      	| rate = 0.35,  outputs 8x8x64 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128, RELU activation|
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 8x8x256, RELU activation|
+| Max pooling	      	| 2x2 stride,  outputs 3x3x256 				|
+| Drop out      	| rate = 0.35,  outputs 3x3x256 				|
+| Flatten     	| outputs 2304 				|
+| Fully connected		| outputs 512      									|
+| Drop out      	| rate = 0.35,  outputs 512 				|
+| Fully connected		| outputs 256      									|
+| Drop out      	| rate = 0.35,  outputs 256 				|
+| Fully connected		| outputs 128      									|
+| Drop out      	| rate = 0.35,  outputs 128 				|
+| Fully connected		| outputs 43      									|
+| Softmax				| 43      									|
+|:---------------------:|:---------------------------------------------:| 
+|	Total parameters					|					1,738,347							|
+|			Trainable parameters					|						1,738,347									|
  
 
 
