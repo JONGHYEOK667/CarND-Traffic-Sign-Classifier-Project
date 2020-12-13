@@ -19,14 +19,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./output_fig/1.Composition_of_data.jpg "Composition of data"
+[image2]: ./output_fig/grayscale.jpg "Grayscaling"
+[image3]: ./output_fig/random_noise.jpg "Random Noise"
+[image4]: ./output_fig/placeholder.png "Traffic Sign 1"
+[image5]: ./output_fig/placeholder.png "Traffic Sign 2"
+[image6]: ./output_fig/placeholder.png "Traffic Sign 3"
+[image7]: ./output_fig/placeholder.png "Traffic Sign 4"
+[image8]: ./output_fig/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -36,7 +36,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/JONGHYEOK667/Udacity_SelfDrivingCar_P3/blob/main/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [Jonghyeok's project code](https://github.com/JONGHYEOK667/Udacity_SelfDrivingCar_P3/blob/main/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -45,15 +45,17 @@ You're reading it! and here is a link to my [project code](https://github.com/JO
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is (32,32,3)
+* The number of unique classes/labels in the data set is 43
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a hist plot of Train / Valid / Test dataset composition   
+As you can see in the graph below, the data distribution for the labels is uneven. However, it can be seen that the density of Train / Valid / Test data for each label is similar.  
+Therefore, it seems to be possible to check the difference in the learning result according to the relative ratio of each label (the amount of data for each label).
 
 ![alt text][image1]
 
