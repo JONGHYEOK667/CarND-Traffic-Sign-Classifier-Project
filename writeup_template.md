@@ -71,7 +71,15 @@ Therefore, it is necessary to check the learning results in the data set with lo
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 
-I normalized the image data because
+I normalized the image data :   
+`X_train = X_train.astype(np.float32)`  
+`X_train_norm = (X_train)/255`  
+
+`X_valid = X_valid.astype(np.float32)`  
+`X_valid_norm = (X_valid)/255`  
+
+`X_test = X_test.astype(np.float32)`  
+`X_test_norm = (X_test)/255`  
 
 
 
