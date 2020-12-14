@@ -22,11 +22,16 @@ The goals / steps of this project are the following:
 [image1]: ./output_fig/1.Composition_of_data.jpg "Composition of data"
 [image2]: ./output_fig/2.Sample_train_Image.jpg "Sample train Image"
 [image3]: ./output_fig/3.Train_history.jpg "Train histroy"
-[image4]: ./output_fig/placeholder.png "Traffic Sign 1"
-[image5]: ./output_fig/placeholder.png "Traffic Sign 2"
-[image6]: ./output_fig/placeholder.png "Traffic Sign 3"
-[image7]: ./output_fig/placeholder.png "Traffic Sign 4"
-[image8]: ./output_fig/placeholder.png "Traffic Sign 5"
+[image4]: ./output_fig/4.Composition_of_False_predict_cases.jpg "Composition of False predict cases"
+[image5]: ./output_fig/5.False_rate_top5.jpg "Faslse rate top 5"
+[image6]: ./output_fig/6.New_Images(1).jpg "Traffic Sign 1"
+[image7]: ./output_fig/6.New_Images(2).jpg "Traffic Sign 2"
+[image8]: ./output_fig/6.New_Images(3).jpg "Traffic Sign 3"
+[image9]: ./output_fig/6.New_Images(7).jpg "Traffic Sign 7"
+[image10]: ./output_fig/6.New_Images(12).jpg "Traffic Sign 12"
+[image11]: ./output_fig/6.New_Images(13).jpg "Traffic Sign 13"
+[image12]: ./output_fig/6.New_Images(18).jpg "Traffic Sign 18"
+[image13]: ./output_fig/6.New_Images(30).jpg "Traffic Sign 30"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -147,10 +152,29 @@ Dropout rate (Adjusted for model overfitting and accuracy)
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Before selecting an image to use for prediction,  I looked for a label wihch is high false rate during the learning process.
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image4]
+
+In general, the percentage of false was high in speed limit signs (ID 1~8), priority road (ID 12), and Beware of ice/snow (ID 30).  
+
+
+![alt text][image5]
+
+
+
+
+So, I predicted using an image with a label with a high false rate. 
+
+![alt text][image6] 
+![alt text][image7] 
+![alt text][image8]
+![alt text][image9] 
+![alt text][image10] 
+![alt text][image11]
+![alt text][image12] 
+![alt text][image13] 
+
 
 The first image might be difficult to classify because ...
 
